@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
 <html>
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
 <head>
     <!--
     CREDITS (please do not remove this text)
@@ -11,59 +15,89 @@
             Go to CreativeCommons.org for more info.
     Base code: Build Themes 
         http://buildthemes.tumblr.com/code/base-sidebar
-        © Build Themes
+        Copyright Build Themes
         Version: 1.4
-    Background and content holder patterns: Subtle Patterns
-        http://subtlepatterns.com
-        CC BY-SA 3.0
-            Go to CreativeCommons.org for more info.
     Social Media icons: Simple Icons
         http://simpleicons.org/
         Free Art License 1.3
             Go to http://artlibre.org/licence/lal/en for more info.
+    Fonts: Google Fonts
+        https://www.google.com/fonts
+            Visit the site to choose your favourite font and add it to the theme by replacing the default fonts in the customization menu.
+        CC BY 3.0
+            Go to CreativeCommons.org for more info.
     -->
     
     <meta name="color:Background" content="#fefefe" />
     <meta name="color:Body Links" content="#7caa41" />
     <meta name="color:Body Text" content="#343434" />
-    <meta name="color:Cont Background" content="#ffffff" />
+    <meta name="color:Post Background" content="#ffffff" />
     <meta name="color:Sidebar Links" content="#7caa41" />
     <meta name="color:Sidebar Text" content="#343434" />
     <meta name="color:Tags and Metadata" content="#929292" />
     
-    <meta name="if:Sidebar Search" content="0" />
-    <meta name="if:Sidebar Portrait" content="0" />
-    <meta name="if:Sidebar Image" content="1" />
+    <meta name="if:Sidebar Portrait" content="1" />
+    <meta name="if:Sidebar Image" content="0" />
+    <meta name="if:Sidebar Search" content="1" />
     
-    <meta name="if:Show Archive Link" content="1" />
-    <meta name="if:Show Random Post Link" content="1" />
     <meta name="if:Show Email Contact Link" content="0" />
-    <meta name="text:Email Address" content="" />
+    <meta name="if:Show Random Post Link" content="1" />
+    <meta name="if:Show Archive Link" content="1" />
     
     <meta name="image:Sidebar Image" content="" />
-    <meta name="image:Background" content="http://static.tumblr.com/ifpvyzm/MfTmm2nls/bedge_grunge.png" />
-    <meta name="image:Sidebar and Post Background" content="http://static.tumblr.com/ifpvyzm/Tl6mm2nfy/lightpaperfibers.png" />
+    <meta name="image:Background" content="" />
+    <meta name="image:Sidebar and Post Background" content="" />
 
+    <meta name="text:Title Font" content="Oswald" />
+    <meta name="text:Text Font" content="Open Sans" />
     <meta name="text:Font Size" content="12px" />
     
+    <meta name="text:Email Address" content="" />
+    <meta name="if:Show RSS Link" content="0" />
+    <meta name="if:Show Facebook Link" content="0" />
+    <meta name="text:Facebook Link" content="" />
     <meta name="if:Show Twitter Link" content="0" />
     <meta name="text:Twitter Handle" content="" />
+    <meta name="if:Show Googleplus Link" content="0" />
+    <meta name="text:Googleplus Link" content="" />
     <meta name="if:Show Instagram Link" content="0" />
     <meta name="text:Instagram Handle" content="" />
+    <meta name="if:Show Vine Link" content="0" />
+    <meta name="text:Vine Link" content="" />
     <meta name="if:Show Flickr Link" content="0" />
     <meta name="text:Flickr Link" content="" />
+    <meta name="if:Show Youtube Link" content="0" />
+    <meta name="text:Youtube Handle" content="" />
+    <meta name="if:Show Vimeo Link" content="0" />
+    <meta name="text:Vimeo Handle" content="" />
+    <meta name="if:Show Deviantart Link" content="0" />
+    <meta name="text:Deviantart Handle" content="" />
+    <meta name="if:Show AO3 Link" content="0" />
+    <meta name="text:AO3 Link" content="" />
+    <meta name="if:Show Livejournal Link" content="0" />
+    <meta name="text:Livejournal Handle" content="" />
+    <meta name="if:Show Wordpress Link" content="0" />
+    <meta name="text:Wordpress Link" content="" />
+    <meta name="if:Show Soundcloud Link" content="0" />
+    <meta name="text:Soundcloud Handle" content="" />
+    <meta name="if:Show Lastfm Link" content="0" />
+    <meta name="text:Lastfm Handle" content="" />
+    <meta name="if:Show Steam Link" content="0" />
+    <meta name="text:Steam Handle" content="" />
+    <meta name="if:Show Goodreads Link" content="0" />
+    <meta name="text:Goodreads Link" content="" />
     <meta name="if:Show Amazon Wishlist Link" content="0" />
     <meta name="text:Amazon Wishlist Link" content="" />
 
     <!--Base-->
 
     {block:Description}
-    <meta name="description" content="{MetaDescription}" />
+        <meta name="description" content="{MetaDescription}" />
     {/block:Description}
 
     <meta charset="utf-8">
 
-    <link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family={text:Title Font}|{text:Text Font}:400,600,300' rel='stylesheet' type='text/css'>
 
     <title>
         {block:TagPage}
@@ -90,7 +124,7 @@
         background: {color:Background} url('{image:Background}');
         background-attachment: fixed;
         color: {color:Body text};
-        font-family: 'Open Sans', sans-serif;
+        font-family: '{text:Text Font}', sans-serif;
         font-weight: 300;
         font-size: {text:Font size};
         }
@@ -102,23 +136,22 @@
     
     a:hover {
         color: {color:Tags and Metadata};
-        text-decoration: none;
         }
 
     h1 {
-        font-family: 'Oswald', cursive;
+        font-family: '{text:Title Font}', cursive;
         font-size: 20px;
         text-transform: capitalize;
         }
     
     h2 {
-        font-family: 'Oswald', cursive;
+        font-family: '{text:Title Font}', cursive;
         font-size: 16px;
         text-transform: capitalize;
         }
     
     h3 {
-        font-family: 'Oswald', cursive;
+        font-family: '{text:Title Font}', cursive;
         font-size: 14px;
         text-transform: capitalize;
         }    
@@ -127,49 +160,42 @@
         max-width: 100%;
         }
     
-    /*Social Media*/
-    
-    .socialmedia {
-        position:fixed;
-        right: 0px;
-        margin-top: 150px;
-        }
-    
-    socialmedia li {
-        display: inline;
-        }
-
-    socialmedia ul {
-        list-style: none;
-        list-style-image: none;
-        margin: 0;
-        padding: 0;
-        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.33);
-        }
-
     /*Sidebar*/
     
-    #Sidebar {
+    #sidebar {
         position: fixed;
-        margin-left: 15%;
-        background: {color:Cont background} url('{image:Sidebar and Post Background}');
-        padding: 30px;
+        margin-left: 100px;
+        background: {color:Post background} url('{image:Sidebar and Post Background}');
+        padding: 30px 15px;
         color: {color:Sidebar text};
         width: 250px;
         height: 100%;
         float: left;
         box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.33);
-        font-family: 'Oswald', cursive;
+        font-family: '{text:Title Font}', cursive;
         }
         
-    #Sidebar a {
+    #sidebar a {
         color: {color:Sidebar links};
-        text-tansform: capitalize;
+        text-transform: capitalize;
         }
     
-    #Sidebar a:hover {
+    #sidebar a:hover {
         color: {color:Tags and Metadata};
         text-decoration: none;
+        }
+	
+	.avatar {
+		}
+    
+    .sidebarimage {
+        max-width: 200px;
+        max-height: 200px;
+        position: absolute;
+        }
+    
+    .description {
+        padding-top: 200px;
         }
         
     nav li {
@@ -179,24 +205,37 @@
     nav ul {
         list-style: none;
         list-style-image: none;
-        margin: 0;
         padding: 0;
+        margin: 0;
         }
     
-    .navicons {
+    .naviconsav {
+        }
+	
+	.naviconssi {
         display: inline-block;
+        position: absolute;
         padding-top: 15px;
-        margin-right: 3px;
-        margin-left: 3px;
+        right: 15px;
         }
     
-    .navicons img:hover {
-        background: rgba(146, 146, 146, .4);
+    .naviconsav, .naviconssi img:hover {
+        opacity: 0.7;
         }
 
     .pages {
         font-weight: 400;
         font-size: 16px;
+        text-align: center;
+        padding-top: 15px;
+        }
+    
+     .socialmedia {
+        padding-top: 20px;
+        }
+    
+    .socialmedia img:hover {
+        opacity: 0.7;
         }
     
     .pagination {
@@ -234,17 +273,23 @@
     
     .searchresultsandtagpage {
         padding-top: 30px;
-        font-family: 'Oswald', cursive;
+        font-family: '{text:Title Font}', cursive;
         color: {color:Tags and Metadata};
         font-size: 14px;
         text-align: center;
         text-transform: capitalize;
         }
-
+    
+    .searchbar {
+        font-family: '{text:Title Font}', cursive;
+        font-size: 14px;
+        text-align: center;
+        }
+    
     /*Content area, Posts*/
      
     #content {
-        margin-left: 45%;
+        margin-left: 500px;
         width: 560px;
         float: center;
         padding: 15px;
@@ -254,7 +299,7 @@
         margin: 15px;
         padding: 15px;
         text-align: justify;
-        background: {color:Cont background} url('{image:Sidebar and Post Background}');
+        background: {color:Post background} url('{image:Sidebar and Post Background}');
         overflow: hidden;
         box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.33);
         }
@@ -264,7 +309,7 @@
         }
     
     .text .title {
-        font-family: 'Oswald', cursive;
+        font-family: '{text:Title Font}', cursive;
         font-size: 16px;
         text-transform: capitalize;
         margin-top: 15px;
@@ -309,12 +354,15 @@
         }
     
     .link .title {
-        font-family: 'Oswald', cursive;
+        font-family: '{text:Title Font}', cursive;
         font-size: 16px;
         text-transform: capitalize;
         }
     
     .chat .title {
+    	font-family: '{text:Title Font}', cursive;
+        font-size: 16px;
+        text-transform: capitalize;
         }
 
     .chat span {
@@ -331,7 +379,7 @@
         padding: 0;
         }
         
-     .askerportrait {
+    .askerportrait {
         position: absolute;
         margin-bottom: 40 px;
         }
@@ -368,7 +416,7 @@
     
     #tags a {
         color: {color:Tags and Metadata};
-    }
+        }
     
     #tags a:hover {
         color: {color:Body links};
@@ -429,11 +477,10 @@
         margin-right: 1%;
         margin-top: 3px;
         margin-bottom: 3px;
-        opacity: 0.5;
         }
         
     .likeandreblogbuttons li:hover {
-        opacity: 1;
+        opacity: 0.7;
         }
     
     /*Notes displayed on permalink pages*/
@@ -443,18 +490,25 @@
     
     .notes {
         clear: both;
-        padding: 15px;
+        padding: 15px 5px;
         text-align: left;
+        list-style: none;
         }
     
     /*Custom CSS*/
     
     {CustomCSS}
     
+    /*Internet Defense League*/
+    
     IDLBadge {
         position:fixed;
-        right: 0px;
-        margin-top: 30px;
+        left: 0px;
+        top: 30px;
+        }
+    
+    IDLBadge img:hover {
+        opacity: 0.7;
         }
     
     </style>
@@ -466,125 +520,284 @@
     <!--Custom Code-->
     
     <IDLBadge>
-        <a href="http://internetdefenseleague.org"><img src="http://internetdefenseleague.org/images/badges/final/banner_right.png" alt="Member of The Internet Defense League" title=InternetDefenseLeague></a>
+        <a href="http://internetdefenseleague.org" target="_blank"><img src="http://internetdefenseleague.org/images/badges/final/banner_left.png" alt="Member of The Internet Defense League" title="The Internet Defense League"></a>
     </IDLBadge>
     
     <script type="text/javascript">
-        window._idl = {};
-        _idl.variant = "banner";
-        (function() {
-            var idl = document.createElement('script');
-            idl.type = 'text/javascript';
-            idl.async = true;
-            idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
-            document.getElementsByTagName('body')[0].appendChild(idl);
-            })();
-    </script>
+    window._idl = {};
+    _idl.variant = "banner";
+    (function() {
+        var idl = document.createElement('script');
+        idl.type = 'text/javascript';
+        idl.async = true;
+        idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
+        document.getElementsByTagName('body')[0].appendChild(idl);
+    })();
+</script>
     
-    <!--Social Media-->
+    <!----- begin XKit badge /----->
     
-    <div class="socialmedia">
-        <li>
-            {block:IfShowTwitterLink}
-                <ul>
-                    <a href="http://twitter.com/{text:Twitter Handle}"><img src="http://static.tumblr.com/ifpvyzm/hMvn16z0n/twitter-32.png" alt="Twitter" title=Twitter></a>
-                </ul>
-            {/block:IfShowTwitterLink}
-            
-            {block:IfShowInstagramLink}
-                <ul>
-                    <a href="http://instagram.com/{text:Instagram Handle}"><img src="http://static.tumblr.com/ifpvyzm/Icun16zf9/instagram-32.png" alt="Instagram" title=Instagram></a>
-                </ul>
-            {/block:IfShowInstagramLink}
-            
-            {block:IfShowFlickrLink}
-                <ul>
-                    <a href="{text:Flickr Link}"><img src="http://static.tumblr.com/ifpvyzm/T9on16zhv/flickr-32.png" alt="Flickr" title=Flickr></a>
-                </ul>
-            {/block:IfShowFlickrLink}
-            
-            {block:IfShowAmazonWishlistLink}
-                <ul>
-                    <a href="{text:Amazon Wishlist Link}"><img src="http://static.tumblr.com/ifpvyzm/8Ytn16ym8/amazonwishlist-32.png" alt="Amazon Wishlist" title="Amazon Wishlist"></a>
-                </ul>
-            {/block:IfShowAmazonWishlistLink}
-        </li>
+    <style>
+        #xkit_badge {
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        -webkit-transition: 0.3s ease-in;
+        -moz-transition: 0.3s ease-in;
+        -o-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+        }
+        #xkit_badge:hover {
+        opacity: 0.7;
+        }
+    </style>
+    <div style="position: fixed; bottom: 10px; right: 10px; z-index: 99999;">
+        <a href="http://xkit.info" target="_blank"><img src="http://www.studioxenix.com/seven/spread/banners/banner_04.png" id="xkit_badge" alt="XKit Extension for Tumblr!" title="XKit Extension for Tumblr!"></a>
     </div>
     
     <!--Sidebar: portrait/image (optional), title and description-->
     
-    <header id="Sidebar">
+    <header id="sidebar">
         
-        <div id="header">
-            <div align="center">
+		{block:IfSidebarPortrait}
+			
+			<div id="avatar" align="center">
+				<img src="{PortraitURL-96}">
+			</div>
+		
+			<h1 align="center"><a href="/" title="{lang:Home}">{Title}</a></h1>
+            
+            <nav><div id="naviconsav" align="center">
+            
+                <ul>
+                    {block:AskEnabled}
+                        <li>
+                            <a href="/ask"><img src="http://static.tumblr.com/ifpvyzm/kS6n1ebn2/askdark.png" alt={AskLabel} title="{AskLabel}"></a>
+                        </li>
+                    {/block:AskEnabled}
+            
+                    {block:SubmissionsEnabled}
+                        <li>
+                            <a href="/submit"><img src="http://static.tumblr.com/ifpvyzm/BuOn1ebqm/submitdark.png" alt={SubmitLabel} title="{SubmitLabel}"></a>
+                        </li>
+                    {/block:SubmissionsEnabled}
+            
+                    {block:IfShowEmailContactLink}
+                        <li>
+                            <a href="mailto:{text:Email Address}"><img src="http://static.tumblr.com/ifpvyzm/drin1eboc/maildark.png" alt={lang:Send me an email} title="{lang:Send me an email}"></a>
+                        </li>
+                    {/block:IfShowEmailContactLink}
+            
+                    {block:IfShowRandomPostLink}
+                        <li>
+                            <a href="/random"><img src="http://static.tumblr.com/ifpvyzm/R0Yn1ebpn/randomdark.png" alt={lang:Random post} title="{lang:Random post}"></a>
+                        </li>
+                    {/block:IfShowRandomPostLink}
+            
+                    {block:IfShowArchiveLink}
+                        <li>
+                            <a class="archives" href="/archive"><img src="http://static.tumblr.com/ifpvyzm/jaXn1eblo/archivedark.png" alt={lang:Archive} title={lang:Archive}></a>
+                        </li>
+                    {/block:IfShowArchiveLink}
+            
+                    <li>
+                        <a href="http://idoitbrilliantly.tumblr.com/theme" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/1rKn1eyk7/themecreditdark.png" alt="Theme Credit" title="{lang:Install this theme}"></a>
+                    </li>
+                </ul>
+            </div></nav>
                 
-                {block:IfSidebarPortrait}
-                    <img src="{PortraitURL-96}"/>
-                    <h1><a href="/" title="{lang:Home}">{Title}</a></h1>
-                {/block:IfSidebarPortrait}
+            {block:Description}
+                <p>{Description}</p>
+            {/block:Description}
+                    
+        {/block:IfSidebarPortrait}
                 
-                {block:IfSidebarImage}
-                    <a href="/"><img src="{image:Sidebar Image}" title={lang:Home}></a>
-                {/block:IfSidebarImage}
+        {block:IfSidebarImage}
+                
+            <div class="sidebarimage">
+                <a href="/"><img src="{image:Sidebar Image}" title={lang:Home}></a>
+            </div>
+                    
+            <div class="naviconssi">
+                <nav><li>
+                            
+                    {block:AskEnabled}
+                        <ul>
+                             <a href="/ask"><img src="http://static.tumblr.com/ifpvyzm/kS6n1ebn2/askdark.png" alt={AskLabel} title="{AskLabel}"></a>
+                        </ul>
+                    {/block:AskEnabled}
+                            
+                    {block:SubmissionsEnabled}
+                        <ul>
+                            <a href="/submit"><img src="http://static.tumblr.com/ifpvyzm/BuOn1ebqm/submitdark.png" alt={SubmitLabel} title="{SubmitLabel}"></a>
+                        </ul>
+                    {/block:SubmissionsEnabled}
+                            
+                    {block:IfShowEmailContactLink}
+                        <ul>
+                            <a href="mailto:{text:Email Address}"><img src="http://static.tumblr.com/ifpvyzm/drin1eboc/maildark.png" alt={lang:Send me an email} title="{lang:Send me an email}"></a>
+                        </ul>
+                    {/block:IfShowEmailContactLink}
+                            
+                    {block:IfShowRandomPostLink}
+                        <ul>
+                            <a href="/random"><img src="http://static.tumblr.com/ifpvyzm/R0Yn1ebpn/randomdark.png" alt={lang:Random post} title="{lang:Random post}"></a>
+                        </ul>
+                    {/block:IfShowRandomPostLink}
+                            
+                    {block:IfShowArchiveLink}
+                        <ul>
+                            <a class="archives" href="/archive"><img src="http://static.tumblr.com/ifpvyzm/jaXn1eblo/archivedark.png" alt={lang:Archive} title={lang:Archive}></a>
+                        </ul>
+                    {/block:IfShowArchiveLink}
+                            
+                    <ul>
+                        <a href="http://idoitbrilliantly.tumblr.com/theme" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/1rKn1eyk7/themecreditdark.png" alt="Theme Credit" title="{lang:Install this theme}"></a>
+                    </ul>
+                            
+                  </li></nav>
+                </div>
                 
                 {block:Description}
-                    <p>{Description}</p>
+                    <div class="description" align="center">
+                        <p>{Description}</p>
+                    </div>
                 {/block:Description}
+
+            {/block:IfSidebarImage}
         
-    <!--Navigation-->
-        
+    <!--Custom Pages-->
+    
         <nav>
-            <div class="navicons">
-                {block:AskEnabled}
-                    <a href="/ask"><img src="http://static.tumblr.com/ifpvyzm/fYan0vzkt/askgreen.png" alt={AskLabel} title="{AskLabel}"></a>
-                {/block:AskEnabled}
-            </div>
-            
-            <div class="navicons">    
-                {block:SubmissionsEnabled}
-                    <a href="/submit"><img src="http://static.tumblr.com/ifpvyzm/Bbkn0vzlh/submitgreen.png" alt={SubmitLabel} title="{SubmitLabel}"></a>
-                {/block:SubmissionsEnabled}
-            </div>
-            
-            {block:IfShowArchiveLink}
-                <div class="navicons">
-                    <a class="archives" href="/archive"><img src="http://static.tumblr.com/ifpvyzm/w0Fn0vzj0/archivegreen.png" alt={lang:Archive} title={lang:Archive}></a>
-                </div>
-            {/block:IfShowArchiveLink}
-            
-            {block:IfShowRandomPostLink}
-                <div class="navicons">
-                    <a href="/random"><img src="http://static.tumblr.com/ifpvyzm/W3Pn156x9/randomgreen.png" alt={lang:Random post} title="{lang:Random post}"></a>
-                </div>
-            {/block:IfShowRandomPostLink}
-            
-            {block:IfShowEmailContactLink}
-                <div class="navicons">
-                    <a href="mailto:{text:Email Address}"><img src="http://static.tumblr.com/ifpvyzm/K4Vn1572t/mailgreen.png" alt={lang:Send me an email} title="{lang:Send me an email}"></a>
-                </div>
-            {/block:IfShowEmailContactLink}
-        
             <div class="pages">
                 
                 {block:HasPages}
                     {block:Pages}
-                        <li><ul><a href="{URL}">{Label}</a></ul></li>
+                        <li>
+                          <ul>
+                            <a href="{URL}">{Label}</a>
+                          </ul>
+                        </li>
                     {/block:Pages}
                 {/block:HasPages}
-                    
+                  
             </div>
         </nav>
+    
+    <!--Social Media-->
+    
+    <div class="socialmedia" align="center">
+        <nav><ul>
         
-    <!--Search form (optional)-->
+            {block:IfShowRSSLink}
+                <li>
+                    <a href="{RSS}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/Zeen1nqwp/rss.png" alt="RSS" title="RSS"></a>
+                </li>
+            {/block:IfShowRSSLink}
+            
+            {block:IfShowFacebookLink}
+                <li>
+                    <a href="{text:Facebook Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/8R8n1nrb2/facebook.png" alt="Facebook" title=Facebook></a>
+                </li>
+            {/block:IfShowFacebookLink}
         
-        {block:IfSidebarSearch}
-            <form action="/search" method="get">
-            <input type="text" name="q" value="{SearchQuery}"/>
-            <input type="submit" value="{lang:Search}"/>
-            </form>
-        {/block:IfSidebarSearch}
-        
-        </div>
+            {block:IfShowTwitterLink}
+                <li>
+                    <a href="http://twitter.com/{text:Twitter Handle}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/hMvn16z0n/twitter-32.png" alt="Twitter" title=Twitter></a>
+                </li>
+            {/block:IfShowTwitterLink}
+            
+            {block:IfShowGooglePlusLink}
+                <li>
+                    <a href="{text:GooglePlus Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/6iHn1nx5z/googleplus-32.png" alt="Google+" title=Google+></a>
+                </li>
+            {/block:IfShowGooglePlusLink}
+            
+            {block:IfShowInstagramLink}
+                <li>
+                    <a href="http://instagram.com/{text:Instagram Handle}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/Icun16zf9/instagram-32.png" alt="Instagram" title=Instagram></a>
+                </li>
+            {/block:IfShowInstagramLink}
+            
+            {block:IfShowVineLink}
+                <li>
+                    <a href="{text:Vimeo Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/0Ywn1ny3u/vine-32.png" alt="Vine" title=Vine></a>
+                </li>
+            {/block:IfShowVineLink}
+            
+            {block:IfShowFlickrLink}
+                <li>
+                    <a href="{text:Flickr Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/T9on16zhv/flickr-32.png" alt="Flickr" title=Flickr></a>
+                </li>
+            {/block:IfShowFlickrLink}
+            
+            {block:IfShowYoutubeLink}
+                <li>
+                    <a href="http://www.youtube.com/user/{text:Youtube Handle}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/uc6n1ny8l/youtube-32.png" alt="YouTube" title=YouTube></a>
+                </li>
+            {/block:IfShowYoutubeLink}
+            
+            {block:IfShowVimeoLink}
+                <li>
+                    <a href="http://vimeo.com/{text:Vimeo Handle}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/u2on1nxy9/vimeo-32.png" alt="Vimeo" title=Vimeo></a>
+                </li>
+            {/block:IfShowVimeoLink}
+            
+            {block:IfShowDeviantartLink}
+                <li>
+                    <a href="http://{text:Deviantart Handle}.deviantart.com" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/WzZn1nwva/deviantart-32.png" alt="deviantART" title=deviantART></a>
+                </li>
+            {/block:IfShowDeviantartLink}
+            
+            {block:IfShowAO3Link}
+                <li>
+                    <a href="{text:AO3 Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/BoQn1nwl7/ao3.png" alt="AO3" title=AO3></a>
+                </li>
+            {/block:IfShowAO3Link}
+            
+            {block:IfShowLivejournalLink}
+                <li>
+                    <a href="http://{text:Livejournal Handle}.livejournal.com" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/GHtn1nwr4/livejournal-32.png" alt="LiveJournal" title=LiveJournal></a>
+                </li>
+            {/block:IfShowLivejournalLink}
+            
+            {block:IfShowWordpressLink}
+                <li>
+                    <a href="{text:Wordpress Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/cl3n1nycz/wordpress-32.png" alt="WordPress" title=WordPress></a>
+                </li>
+            {/block:IfShowWordpressLink}
+            
+            {block:IfShowSoundcloudLink}
+                <li>
+                    <a href="http://soundcloud.com/{text:Soundcloud Handle}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/BIwn1nxo3/soundcloud-32.png" alt="SoundCloud" title=SoundCloud></a>
+                </li>
+            {/block:IfShowSoundcloudLink}
+            
+            {block:IfShowLastfmLink}
+                <li>
+                    <a href="http://www.last.fm/user/{text:Lastfm Handle}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/fAMn1nxfj/lastfm-32.png" alt="last.fm" title=last.fm></a>
+                </li>
+            {/block:IfShowLastfmLink}
+            
+            {block:IfShowSteamLink}
+                <li>
+                    <a href="http://steamcommunity.com/id/{text:Steam Handle}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/Xrbn1nxwn/steam-32.png" alt="Steam" title=Steam></a>
+                </li>
+            {/block:IfShowSteamLink}
+            
+            {block:IfShowGoodreadsLink}
+                <li>
+                    <a href="{text:Goodreads Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/HHfn1nx18/goodreads-32.png" alt="goodreads" title=goodreads></a>
+                </li>
+            {/block:IfShowGoodreadsLink}
+            
+            {block:IfShowAmazonWishlistLink}
+                <li>
+                    <a href="{text:Amazon Wishlist Link}" target="_blank"><img src="http://static.tumblr.com/ifpvyzm/8Ytn16ym8/amazonwishlist-32.png" alt="Amazon Wishlist" title="Amazon Wishlist"></a>
+                </li>
+            {/block:IfShowAmazonWishlistLink}
+        </ul></nav>
+    </div>
     
     <!--Pagination: previous/next page links-->
     
@@ -664,6 +877,17 @@
                 {lang:Posts tagged Tag}
             {/block:TagPage}
         </div>
+        
+     <!--Search form (optional)-->
+        
+        {block:IfSidebarSearch}
+            <div class="searchbar">
+                <form action="/search" method="get">
+                    <input type="text" name="q" value="{SearchQuery}"/>
+                    <input type="submit" value="{lang:Search}"/>
+                </form>
+            </div>
+        {/block:IfSidebarSearch}
         
     </header>
     
@@ -754,11 +978,11 @@
                 {/block:Link}
 
                     {block:Chat}
-                        {block:Title}
-                            <h2 class="title">{Title}</h2>
-                        {/block:Title}
-                        
                         <div class="chat">
+                            {block:Title}
+                                <div class="title">{Title}</div>
+                            {/block:Title}
+                        
                             <ul>
                                 {block:Lines}
                                     <li class="{Alt}">
@@ -891,9 +1115,6 @@
                 
             </article>
         {/block:Posts}
-     
-    <!--Close of article-->
-    </div>
     
 </body>
 </html>
